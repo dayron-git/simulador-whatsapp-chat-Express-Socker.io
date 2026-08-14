@@ -1,0 +1,189 @@
+body {
+    background-color: #73d396;
+    display: flex;             
+    justify-content: space-around;    
+    align-items: center;       
+    gap: 30px;                  
+    height: 100vh;
+    padding: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#chat1, #chat2 {
+    border: 10px solid black;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 350px;
+    height: 80%;
+    background-image: url(/img/fondo.jpg);
+    background-size: cover;            /* Escala la imagen sin deformar y sin dejar espacios */
+    background-position: center;       /* Centra la imagen */
+    background-repeat: no-repeat;      /* No repite la imagen */
+    image-rendering: auto;             /* Asegura calidad óptima de la imagen */
+    position: relative;
+}
+
+
+#form1, #form2 {
+    bottom: 0;
+    display: flex;
+    left: 0;
+    right: 0;
+    height: 48px;
+    padding: 4px;
+    position: absolute;
+}
+
+#mensaje1, #mensaje2 {
+    border-radius: 999px;
+    border: 1px solid white;
+    flex: 1;
+    margin: 4px;
+    padding: 0 8px;
+}
+
+.iphone-notch {
+    width: 210px;
+    height: 30px;
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+button{
+   border-radius: 999px;
+    border: 1px solid white;
+    margin: 4px;
+    padding: 0 8px;
+    transition: all 300ms ease;
+}
+
+button:hover{
+   border-radius: 999px;
+   background-color: #128C7E;
+    border: 1px solid #128C7E;
+    margin: 4px;
+    padding: 0 8px;
+}
+
+.status-bar {
+    position: absolute;
+    top: 5px; 
+    width: 100%;
+    padding: 4px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    z-index: 9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.status-bar .time {
+    font-weight: bold;
+}
+
+.status-bar .icons span {
+    margin-left: 4px;
+}
+
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 35px 10px 10px;
+  background-color: #128C7E;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #128C7E;
+  position: relative;
+  z-index: 5;
+  gap: 10px;
+  border-bottom:1px solid #06443d;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info strong {
+  font-size: 14px;
+  color: white;
+}
+
+.contact-info .status {
+  font-size: 12px;
+  color: white;
+}
+
+.chat-actions i {
+  margin-left: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+}
+
+
+li {
+    list-style: none;
+    background-color: #128C7E;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px 15px 15px 0px;
+    width: fit-content; 
+    max-width: 60%;
+    word-wrap: break-word;
+    font-family: sans-serif;
+
+}
+
+li.enviado{
+  align-self: flex-end;
+  padding: 8px 12px;
+  margin: 2px 5px;
+  border-radius: 15px 15px 0px 15px;
+}
+
+li.recibido{
+  background-color: #2f2f2f;
+  align-self: flex-start;
+  padding: 8px 12px;
+  margin: 2px 5px;
+  border-radius: 15px 15px 15px 0px;
+
+}
+
+#chat1-mensajes, #chat2-mensajes {
+  height: 80%; /* Puedes ajustar la altura como desees */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+#chat1-mensajes::-webkit-scrollbar,
+#chat2-mensajes::-webkit-scrollbar {
+  width: 3px; /
+}
